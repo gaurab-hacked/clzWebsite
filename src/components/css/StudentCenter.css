@@ -1,0 +1,40 @@
+#StudentCenter{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0;
+}
+#StudentCenter img{
+    width: 230px;
+    height: 180px;
+}
+#StudentCenterLeft, #StudentCenterRight{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#StudentCenter p{
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+#StudentCenter a{
+    text-decoration: none;
+}
+#StudentCenter a button i{
+    font-size: 20px;
+}
+#StudentCenter a button{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}

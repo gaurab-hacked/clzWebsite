@@ -1,0 +1,26 @@
+#top_header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+#top_header #gmailacc{
+    width: 30%;
+}
+#top_header #gmailacc a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: black;
+}
+#contacts{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+#contacts .socialMedia{
+    display: flex;
+    gap: 15px;
+}

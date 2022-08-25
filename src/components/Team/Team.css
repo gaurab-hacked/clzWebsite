@@ -1,0 +1,9 @@
+#TeamSection{
+    margin-top: 30px;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    height: 100%;
+}
+#TeamSection h1{
+    margin: 30px;
+}

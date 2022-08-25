@@ -1,0 +1,24 @@
+#AboutContainerMission{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+#AboutContainerMission #AboutMissionRight{
+    width: 50%;
+}
+#AboutMissionRight h3, #AboutMissionLeft h3{
+    margin: 10px 0;
+    letter-spacing: 3px;
+}
+#AboutContainerMission #AboutMissionRight p, #AboutContainerMission #AboutMissionLeft p{
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0, .7);
+}
+#AboutContainerMission #AboutMissionLeft{
+    width: 50%;
+}

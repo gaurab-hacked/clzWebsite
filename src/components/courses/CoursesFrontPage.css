@@ -1,0 +1,59 @@
+#courseHome{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(0, 0, 15);
+    position: relative;
+    z-index: 1;
+}
+#courseHome::before{
+    content: "";
+    position: absolute;
+    background-image: url('../../images/cover/cover_img_1.jpg');
+    top: 0;bottom: 0;right: 0;left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    opacity: .4;
+    z-index: -1;
+}
+#courseHome .contentsCourse{
+    width: 50%;
+    margin: auto;
+    padding: 150px 0;
+}
+#courseHome #headingCourses{
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+}
+#courseHome .contentsCourse p{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 20px;
+}
+#CoursesDiscription{
+    height: 100%;
+    width: 100%;
+}
+
+#CoursesDiscription .courseDisContent{
+    width: 40%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+#CoursesDiscription .courseDisContent h4{
+    text-align: center;
+}
+#CoursesDiscription .courseDisContent p{
+    text-align: justify;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0, .7);
+}

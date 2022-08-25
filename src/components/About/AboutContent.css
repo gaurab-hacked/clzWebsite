@@ -1,0 +1,34 @@
+#AboutContent{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+#AboutRightBox{
+    width: 50%;
+
+}
+#AboutRightBox p{   
+    text-align: justify;
+    color: rgb(0, 0, 0, .6);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+#AboutRightBox .headPara{
+    font-weight: 600;
+}
+#AboutRightBox .aboutHeading{
+    font-size: 32px;
+    font-weight: 700;
+}
+#AboutLeftBox{
+    width: 40%;
+}
+#AboutLeftBox img{
+    width: 500px;
+    height: 400px;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgb(134, 116, 116);
+}

@@ -1,0 +1,94 @@
+#CoueseEachContent{
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+#CoueseEachContent .cards{
+    background-color: rgb(249, 243, 255);
+    display: flex;
+    width: 550px;
+    margin: 20px;
+}
+#CoueseEachContent .cards .cardLeftSec{
+    width: 50%;
+    height: 400px;
+    position: relative;
+    background-color: black;
+}
+#CoueseEachContent #BCA .cardLeftSec::before,
+#CoueseEachContent #BBM .cardLeftSec::before,
+#CoueseEachContent #BBS .cardLeftSec::before,
+#CoueseEachContent #BSW .cardLeftSec::before,
+#CoueseEachContent #MBS .cardLeftSec::before{
+    content: "";
+    position: absolute;
+    top: 0;bottom: 0;right: 0;left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+    transition: .5s;
+}
+
+
+
+#CoueseEachContent #BCA .cardLeftSec:hover::before,
+#CoueseEachContent #BBM .cardLeftSec:hover::before,
+#CoueseEachContent #BBS .cardLeftSec:hover::before,
+#CoueseEachContent #BSW .cardLeftSec:hover::before,
+#CoueseEachContent #MBS .cardLeftSec:hover::before{
+    opacity: .5;
+    cursor: pointer;
+}
+#CoueseEachContent #BSW .cardLeftSec::before{
+    background-image: url("../../images/courses/courses_img_ba.JPG");
+}
+#CoueseEachContent #BBM .cardLeftSec::before{
+    background-image: url("../../images/courses/courses_img_bbM.JPG");
+}
+#CoueseEachContent #BBS .cardLeftSec::before{
+    background-image: url("../../images/courses/courses_img_bbs.JPG");
+}
+#CoueseEachContent #BCA .cardLeftSec::before{
+    background-image: url("../../images/courses/courses_img_bca.JPG");
+}
+#CoueseEachContent #MBS .cardLeftSec::before{
+    background-image: url("../../images/courses/courses_img_mbs.JPG");
+}
+
+#CoueseEachContent .cards .cardRightSec{
+    width: 50%;
+    padding: 20px;
+}
+#CoueseEachContent .cards .cardRightSec h3{
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+#CoueseEachContent .cards .cardRightSec p{
+    text-align: justify;
+    color: rgb(0,0,0,.7);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .5px;
+    margin-top: 10px;
+}
+
+#CoueseEachContent .cards .cardRightSec button{
+    padding: 7px 13px;
+    border: 2px solid rgb(0, 0, 0, .7);
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+#CoueseEachContent .cards .cardRightSec button:hover{
+    background-color: rgb(0, 0, 0, .8);
+    color: rgb(255, 255, 255, .8);
+}   
+
+#SubjectContent{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+    margin-left: 10px;
+}

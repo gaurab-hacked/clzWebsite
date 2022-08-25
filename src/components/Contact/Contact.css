@@ -1,0 +1,50 @@
+#Contact{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Contact .contentSection h1{
+    text-align: center;
+    margin: 30px 0;
+}
+
+#Contact .contentSection #ContactForm{
+    width: 600px;
+    background-color: rgba(255, 207, 207, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+#Contact .contentSection #ContactForm .Contactsection{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#Contact .contentSection #ContactForm .Contactsection label{
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0, 0.7);
+}
+#Contact .contentSection #ContactForm .Contactsection input, #ContactForm .Contactsection textarea{
+    padding: 10px 15px;
+    color: rgb(0, 0, 0, 0.7);
+    font-weight: 600;
+}
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
+    display: none;
+    margin: 0;
+}
+#ContactForm .Contactsection textarea{
+    height: 180px;
+    margin-top: 10px;
+}
+#ContactForm .Contactsection button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(34, 34, 255);
+    color: rgb(253, 253, 253, .9);
+    font-size: 17px;
+    letter-spacing: 2px;
+}
