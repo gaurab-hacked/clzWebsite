@@ -15,6 +15,7 @@ import StudentCenter from "./components/StudentCenter";
 import Login from "./components/Login/Login";
 import PreRegistation from './components/preregistation/PreRegistation'
 
+
 function App() {
   return (
       <BrowserRouter>
@@ -28,8 +29,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/studentcenter" element={<StudentCenter />} />
             <Route path="/gallery" element={<PageNotFound />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/PreRegistation" element={<PreRegistation />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <Footer />

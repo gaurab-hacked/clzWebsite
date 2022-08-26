@@ -20,7 +20,7 @@
 #Contact .contentSection #ContactForm .Contactsection{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px 20px;
 }
 #Contact .contentSection #ContactForm .Contactsection label{
     font-weight: 700;
@@ -38,7 +38,7 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
 }
 #ContactForm .Contactsection textarea{
     height: 180px;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 #ContactForm .Contactsection button{
     padding: 10px;
@@ -47,4 +47,9 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
     color: rgb(253, 253, 253, .9);
     font-size: 17px;
     letter-spacing: 2px;
+}
+#ContactForm .Contactsection .Contacterrormsg{
+    margin: 5px;
+    color: red;
+    font-size: 14px;
 }

@@ -3,6 +3,8 @@ import Cover1 from '../../images/cover/cover_img_1.jpg';
 import Cover2 from '../../images/cover/cover_img_2.jpg';
 import Cover3 from '../../images/cover/cover_img_3.jpg';
 import "./Imageslider.css"
+import { Link } from "react-router-dom";
+
 
 const Imageslider = () => {
   return (
@@ -14,13 +16,15 @@ const Imageslider = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={Cover1} className="d-block w-100" alt="..."/>
+          <img src={Cover1} className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block"   >
             <h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
             <br />
             <p >Greenfield National College</p>
             <p className='my-3'>"Dare To Dream"</p>
-            <button className='btn btn-primary'  >PRE_REGISTATION!</button>
+            <Link to="/PreRegistation">
+              <button className='btn btn-primary'  >PRE_REGISTATION!</button>
+            </Link>
           </div>
         </div>
         <div className="carousel-item">
@@ -30,7 +34,9 @@ const Imageslider = () => {
             <br />
             <p  >Greenfield National College</p>
             <p className='my-3'>"Dare To Dream"</p>
-            <button className='btn btn-primary'  >PRE_REGISTATION!</button>
+            <Link to="/PreRegistation">
+              <button className='btn btn-primary'  >PRE_REGISTATION!</button>
+            </Link>
           </div>
         </div>
         <div className="carousel-item">
@@ -40,7 +46,9 @@ const Imageslider = () => {
             <br />
             <p  >Greenfield National College</p>
             <p className='my-3'>"Dare To Dream"</p>
-            <button className='btn btn-primary'  >PRE_REGISTATION!</button>
+            <Link to="/PreRegistation">
+              <button className='btn btn-primary'  >PRE_REGISTATION!</button>
+            </Link>
           </div>
         </div>
       </div>

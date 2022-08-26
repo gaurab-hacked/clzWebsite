@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AboutContent from './AboutContent'
 import AboutMission from './AboutMission'
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.title = "GNC-About"
+  }, [])
   return (
     <div>
       <AboutContent/>

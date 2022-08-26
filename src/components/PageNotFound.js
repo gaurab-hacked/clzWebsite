@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import "./css/PageNotFound.css";
 
 const PageNotFound = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        document.title = "GNC-NotFound"
+      }, [])
     return (
         <div id="NotFound">
             <div className="NotFoundcontent">

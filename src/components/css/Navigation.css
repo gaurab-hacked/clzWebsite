@@ -1,26 +1,114 @@
-#top_header{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    scroll-behavior: smooth;
 }
-#top_header #gmailacc{
+nav{
+    background-color: rgb(255, 246, 246);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    height: 10vh;
+    align-items: center;
+    
+}
+nav #logo{
+    text-transform: uppercase;
+    margin-left: 30px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 600;
     width: 30%;
 }
-#top_header #gmailacc a{
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 17px;
-    color: black;
+nav #logo a img{
+    height: 40px;
+    width: 190px;
 }
-#contacts{
+nav .nav-Hide{
+    width: 70%;
+    display: block;
+}
+nav .navlinks{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 40%;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 100px;
 }
-#contacts .socialMedia{
-    display: flex;
-    gap: 15px;
+nav .navlinks li{
+    list-style: none;
+}
+nav .navlinks li a{
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-size: 14px;
+    transition: .5s;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+nav .navlinks li a:hover{
+    color: rgb(0, 0, 0);
+}
+nav #contactBtn{
+    margin-right: 20px;
+    padding: 5px 10px;
+    background:none;
+    border: none;
+    box-shadow: 0px 0px 2px  0px rgb(50, 1, 1);
+    text-transform: uppercase;
+    transition: .5s;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: rgb(58, 37, 240);
+    color: rgb(255, 255, 255, .7);
+}
+nav #contactBtn:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(13, 0, 65);
+    cursor: pointer;
+    border: none;
+}
+nav #hamburger{
+    display: none;
+    position: absolute;
+    right: 20px;
+    font-size: 25px;
+}
+nav #cloceBurger{
+    display: none;
+    position: absolute;
+    right: 20px;
+    font-size: 25px;
+}
+@media screen and (max-width:1000px) {
+    .nav-Hide{
+        display: none;
+    }
+    .navlinks{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        width: 50%;
+        justify-content: space-around;
+    }
+    #hamburger{
+        display: block;
+    }
+    #contactBtn{
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width:500px) {
+    .navlinks{
+        width: 100%;
+    }
 }

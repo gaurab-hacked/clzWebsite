@@ -1,8 +1,21 @@
 import "./Login.css";
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
 
 const Login = () => {
+    // for scrolling top
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        document.title = "GNC-Login"
+      }, [])
+
+
+    //for imputfield message error
+    const [error, setError] = useState({
+        username:"",
+        password:""
+    });
+
+    
     //for user name and password
     const [initialVal, setInitialVal] = useState({
         username:"",
@@ -26,9 +39,19 @@ const Login = () => {
     //needs to send in backend
     const handelSubmit = (e) =>{
         e.preventDefault();
-        console.log("clicked");
+        //include check box value
         initialVal.remember = checkbox;
-        console.log(initialVal);
+        //include error logic
+        if(initialVal.username.toString().length<5||initialVal.username.toString().length>20){
+            setError({username:"Name must be 5-20 character.",password:""})
+        }
+        else if(initialVal.password.toString().length<6||initialVal.password.toString().length>16){
+            setError({username:"",password:"Password must be 6-16 character"})
+        }
+        else{
+            setError({username:"",password:""});
+            console.log(initialVal);
+        }
     }
 
     // TODO: Check box
@@ -42,11 +65,13 @@ const Login = () => {
                         <div className="Loginsection">
                             <label htmlFor="username">Username/Email</label>
                             <input type="text" name="username" id="username" placeholder='Enter your Username..' value={initialVal.username} onChange={inpvalchange} />
+                            <p className="msgerror">{error.username}</p>
                         </div>
 
                         <div className="Loginsection">
                             <label htmlFor="password">Password</label>
                             <input type="password" name="password" id="address" placeholder='Enter your password..' value={initialVal.password} onChange={inpvalchange} />
+                            <p className="msgerror">{error.password}</p>
                         </div>
 
                         <div className="Loginsection">

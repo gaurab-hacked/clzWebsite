@@ -1,8 +1,11 @@
 import React from 'react'
+import "./css/Footer.css"
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
-    <div id="footer" style={{ background: "rgb(0, 0, 0, .8)", color: "rgb(255, 255, 255, 0.8)"}}>
+    <div id="footer" style={{ background: "rgb(0, 0, 0, .8)", color: "rgb(255, 255, 255, 0.8)" }}>
       <footer className="text-center">
         <section className="d-flex justify-content-center container justify-content-lg-between p-4 my-5 border-bottom">
           <div className="me-5 d-none d-lg-block">
@@ -10,10 +13,18 @@ const Footer = () => {
           </div>
           <div>
             <div className="socialMedia">
-              <i className="fa-brands fa-facebook-f mx-4"></i>
-              <i className="fa-brands fa-twitter mx-4"></i>
-              <i className="fa-brands fa-instagram mx-4"></i>
-              <i className="fa-solid fa-message mx-4"></i>
+              <a href="https://www.facebook.com/greenfieldcollegenepal" target="blank">
+                <i className="fa-brands fa-facebook-f mx-4"></i>
+              </a>
+              <a href="https://twitter.com/" target="blank">
+                <i className="fa-brands fa-twitter mx-4"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="blank">
+                <i className="fa-brands fa-instagram mx-4"></i>
+              </a>
+              <a href="https://www.facebook.com/messages/t/1866373626778452" target="blank">
+                <i className="fa-solid fa-message mx-4"></i>
+              </a>
             </div>
           </div>
         </section>
@@ -34,19 +45,19 @@ const Footer = () => {
                   ACADAMIC PROGRAMS
                 </h6>
                 <p>
-                  <a href="#!" className="text-reset">MBS</a>
+                  <Link to="/courses" className="text-reset">MBS</Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">BBS</a>
+                  <Link to="/courses" className="text-reset">BBS</Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">BBM</a>
+                  <Link to="/courses" className="text-reset">BBM</Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">BCA</a>
+                  <Link to="/courses" className="text-reset">BCA</Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">BA/BSW</a>
+                  <Link to="/courses" className="text-reset">BA/BSW</Link>
                 </p>
               </div>
 

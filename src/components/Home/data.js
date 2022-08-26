@@ -1,7 +1,12 @@
+import Img1 from '../../images/BOD/img_chairman.jpg'
+import Img2 from '../../images/BOD/img_principal.jpg'
+import Img3 from '../../images/BOD/deepakadhikari.jpg'
+
+
 const people = [
   {
     id: 1,
-    image: "https://gnc.edu.np/images/BOD/img_chairman.jpg",
+    image: Img1,
     name: "Chandra Bahadur KC",
     title: "--Chief Advisor--",
     quote:
@@ -9,7 +14,7 @@ const people = [
   },
   {
     id: 2,
-    image: "https://gnc.edu.np/images/BOD/img_principal.jpg",
+    image: Img2,
     name: "Basant Bhattarai",
     title: "--Principal--",
     quote:
@@ -17,7 +22,7 @@ const people = [
   },
   {
     id: 3,
-    image: "https://gnc.edu.np/images/BOD/deepakadhikari.jpg",
+    image: Img3,
     name: "Deepak Adhikari",
     title: "Co-ordinator",
     quote:

@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './form.css'
 import RegistrationForm from './RegistrationForm';
 // import PostDataContext from '../context/PostDataContext';
 
 
-
 const PreRegistation = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.title = "GNC-Registation"
+  }, [])
   // const {postData} = useContext(PostDataContext);
   // for form values
   const [stream, setStream] = useState("");
