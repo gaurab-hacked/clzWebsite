@@ -35,3 +35,33 @@
     color: white;
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 1000px) {
+    #NotFound .NotFoundcontent {
+        width: 75%;
+    }
+    #NotFound .NotFoundcontent h1 {
+        font-size: 7rem;
+    }
+    #NotFound .NotFoundcontent h2 {
+        font-size: 1.3rem;
+    }
+    #NotFound .NotFoundcontent p {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #NotFound .NotFoundcontent {
+        width: 85%;
+    }
+    #NotFound .NotFoundcontent h1 {
+        font-size: 5rem;
+    }
+    #NotFound .NotFoundcontent h2 {
+        font-size: 1.3rem;
+    }
+    #NotFound .NotFoundcontent p {
+        font-size: .8rem;
+    }
+}

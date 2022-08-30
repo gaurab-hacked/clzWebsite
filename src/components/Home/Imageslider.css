@@ -28,3 +28,46 @@
 #carouselExampleCaptions .carousel-inner{
     background-color: rgb(0, 0, 0);
 }
+.d-none {
+    display: block!important;
+}
+
+@media screen and (max-width:700px) {
+    #carouselExampleCaptions .carousel-inner .carousel-caption h1{
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+    #carouselExampleCaptions .carousel-inner .carousel-caption p{
+        font-size:18px;
+    }
+    #carouselExampleCaptions .carousel-inner .carousel-caption button{
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:700px) {
+    #carouselExampleCaptions .carousel-inner .carousel-caption h1{
+        font-size: 20px;
+        margin-top: -300px;
+    }
+    #carouselExampleCaptions .carousel-inner .carousel-caption p{
+        font-size:16px;
+    }
+    #carouselExampleCaptions .carousel-inner .carousel-caption button{
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    #carouselExampleCaptions .carousel-inner .carousel-caption {
+        padding: 0px;
+    }
+}
+
+
+
+
+.carousel-indicators [data-bs-target] {
+    width: 8px!important;
+    height: 8px!important;
+    border-radius: 50%!important;
+    margin: 0 5px;
+}

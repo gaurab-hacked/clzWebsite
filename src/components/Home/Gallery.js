@@ -8,15 +8,17 @@ import img4 from '../../images/insta/img_bbs.jpg'
 const Gallery = () => {
   return (
     <div id='gallery'>
+      <div className="gallerycontnet">
         <div id="Gallerytitle">
-            <p>gallery</p>
+          <p>gallery</p>
         </div>
         <div id="galleryImgs">
-            <img src={img1} alt="img1" />
-            <img src={img2} alt="img1" />
-            <img src={img3} alt="img1" />
-            <img src={img4} alt="img1" />
+          <img src={img1} alt="img1" />
+          <img src={img2} alt="img1" />
+          <img src={img3} alt="img1" />
+          <img src={img4} alt="img1" />
         </div>
+      </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@
     display: grid;
 }
 #CoueseEachContent .cards{
-    background-color: rgb(249, 243, 255);
+    background-color: #fafafa;
     display: flex;
     width: 550px;
     margin: 20px;
@@ -28,6 +28,7 @@
     opacity: .8;
     transition: .5s;
 }
+
 
 
 
@@ -73,22 +74,81 @@
 }
 
 #CoueseEachContent .cards .cardRightSec button{
-    padding: 7px 13px;
-    border: 2px solid rgb(0, 0, 0, .7);
+    border: 2px solid rgba(0, 0, 0, 0.8) !important;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.8) !important;
+    font-size: 12px;
     text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 5px;
-    transition: .5s;
+    font-weight: 700;
     letter-spacing: 1px;
+    padding: 11px 15px !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    transition: .4s;
+    font-size: 11px;
 }
 #CoueseEachContent .cards .cardRightSec button:hover{
     background-color: rgb(0, 0, 0, .8);
-    color: rgb(255, 255, 255, .8);
+    color: rgb(255, 255, 255, .8) !important;
 }   
 
 #SubjectContent{
-    padding: 30px;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
     margin-left: 10px;
+}
+@media screen and (max-width: 1000px) {
+    #CoueseEachContent .cards {
+        width: 690px;
+        margin: 20px auto;
+    }    
+}
+
+@media screen and (max-width: 750px) {
+    #CoueseEachContent .cards{
+        margin: 5px;
+    }
+    #courseHome .contentsCourse {
+        width: 100%;
+    }
+    #courseHome #headingCourses {
+        padding: 20px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    #courseHome .contentsCourse p {
+        font-size: 15px;
+    }
+    #CoursesDiscription .courseDisContent {
+        width: 90%;    
+        margin: 50px auto;
+
+    }
+    #SubjectContent {
+        padding: 10px;
+        margin-left: 0px;
+    }
+    #CoueseEachContent .cards {
+        flex-direction: column;
+    }
+    #SubjectContent {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 400px));
+        justify-content: center;
+        gap: 20px;
+    }
+    #CoueseEachContent .cards {
+        width:100%;
+    }
+    #CoueseEachContent .cards .cardLeftSec {
+        width: 100%;
+    }
+    #CoueseEachContent .cards .cardRightSec {
+        width: 100%;
+    }
+    #CoueseEachContent .cards .cardLeftSec {
+        height: 500px;
+    }
 }

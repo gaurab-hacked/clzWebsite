@@ -22,3 +22,17 @@
 #AboutContainerMission #AboutMissionLeft{
     width: 50%;
 }
+@media screen and (max-width: 750px) {
+    #AboutContainerMission #AboutMissionRight {
+        width: 100%;
+    }
+    #AboutContainerMission #AboutMissionLeft {
+        width: 100%;
+    }
+    #AboutContainerMission {
+        gap: 20px;
+    }
+    #AboutContainerMission {
+        flex-direction: column;
+    }
+}

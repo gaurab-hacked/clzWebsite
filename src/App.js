@@ -11,28 +11,28 @@ import {
 import Team from "./components/Team/Team";
 import Contact from "./components/Contact/Contact";
 import PageNotFound from "./components/PageNotFound";
-import StudentCenter from "./components/StudentCenter";
+// import StudentCenter from "./components/StudentCenter";
 import Login from "./components/Login/Login";
-import PreRegistation from './components/preregistation/PreRegistation'
+// import PreRegistation from './components/preregistation/PreRegistation'
+import Registation from "./components/registation/Registation";
+
 
 
 function App() {
   return (
       <BrowserRouter>
         <Navigation />
-        <div style={{ paddingTop: "60px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/studentcenter" element={<StudentCenter />} />
+            <Route path="/studentcenter" element={<PageNotFound />} />
             <Route path="/gallery" element={<PageNotFound />} />
-            <Route path="/PreRegistation" element={<PreRegistation />} />
+            <Route path="/PreRegistation" element={<Registation />} />
             <Route path="/login" element={<Login />} />
           </Routes>
-        </div>
         <Footer />
       </BrowserRouter>
   );

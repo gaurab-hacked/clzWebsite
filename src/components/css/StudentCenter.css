@@ -1,4 +1,4 @@
-#StudentCenter{
+/* #StudentCenter{
     height: 100%;
     width: 100%;
     display: flex;
@@ -38,3 +38,21 @@
     margin-bottom: 10px;
     border: 1px solid black;
 }
+
+@media screen and (max-width:500px) {
+    #StudentCenter {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #StudentCenterLeft, #StudentCenterRight {
+        width: 100%;
+    }
+    #StudentCenter img {
+        width: 220px;
+        height: 177px;
+    }
+    #StudentCenter a button {
+        padding: 8px 17px;
+        font-size: 13px;
+    }
+} */

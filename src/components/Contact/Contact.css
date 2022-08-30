@@ -13,7 +13,7 @@
 
 #Contact .contentSection #ContactForm{
     width: 600px;
-    background-color: rgba(255, 207, 207, 0.3);
+    background-color: #f2f2f2;
     border-radius: 10px;
     padding: 10px;
 }
@@ -52,4 +52,20 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
     margin: 5px;
     color: red;
     font-size: 14px;
+}
+@media screen and (max-width:500px) {
+    #Contact {
+        width: 100%;
+    }
+    #Contact .contentSection #ContactForm{
+        width: 340px;
+        margin: auto;
+    }
+    #Contact .contentSection #ContactForm .Contactsection {
+        width: 300px;
+    }
+    #Contact .contentSection #ContactForm .Contactsection {
+        padding: 0px 0px;
+        margin: auto;
+    }
 }
