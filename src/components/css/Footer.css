@@ -1,7 +1,6 @@
 #footer{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
-    height:90vh!important;
 }
 #footer a{
     color: rgba(255, 255, 255, 0.8);
@@ -12,21 +11,4 @@
 .footerst a{
     text-decoration: none;
     color: rgb(0, 0, 0, .8);
-}
-@media screen and (max-width: 1000px) {
-    #footer{
-        height: 120vh!important;
-    }
-
-}
-@media screen and (max-width: 800px) {
-    #footer{
-        height: 150vh!important;
-    }
-
-}
-@media screen and (max-width: 500px) {
-    #footer{
-        height: 170vh!important;
-    }
 }

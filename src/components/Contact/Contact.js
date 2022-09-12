@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./Contact.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Contact = () => {
   useEffect(() => {
@@ -10,44 +13,50 @@ const Contact = () => {
 
   //for error message 
   const [error, setError] = useState({
-    name:"",
-    address:"",
-    phnumber:"",
-    email:"",
-    message:""
+    name: "",
+    address: "",
+    phnumber: "",
+    email: "",
+    message: ""
   })
 
 
   const [initialContact, setInitialContact] = useState({
-    name:"",
-    address:"",
-    phnumber:"",
-    email:"",
-    message:""
+    name: "",
+    address: "",
+    phnumber: "",
+    email: "",
+    message: ""
   })
-  const inpchange = (e)=>{
-    setInitialContact({...initialContact, [e.target.name]:e.target.value});
+  const inpchange = (e) => {
+    setInitialContact({ ...initialContact, [e.target.name]: e.target.value });
   }
-  const contactHandelSubmit = (e) =>{
+  const contactHandelSubmit = (e) => {
     e.preventDefault();
     //for error logic
-    if(initialContact.name.toString().length<5||initialContact.name.toString().length>20){
-      setError({name:"Name must be 5-20 character.",address:"",phnumber:"",email:"",message:""})
+    if (initialContact.name.toString().length < 5 || initialContact.name.toString().length > 30 || !isNaN(initialContact.name)) {
+      setError({ name: "Name must be 5-30 character.", address: "", phnumber: "", email: "", message: "" })
+      toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Name</>);
     }
-    else if(initialContact.address.toString().length<5||initialContact.address.toString().length>40){
-      setError({name:"",address:"Address must be 5-40 character.",phnumber:"",email:"",message:""})
+    else if (initialContact.address.toString().length < 5 || initialContact.address.toString().length > 40) {
+      toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Address</>);
+      setError({ name: "", address: "Address must be 5-40 character.", phnumber: "", email: "", message: "" })
     }
-    else if(initialContact.phnumber.toString().length<10||initialContact.address.toString().length>14){
-      setError({name:"",address:"",phnumber:"Please enter valid phone number",email:"",message:""})
+    else if (initialContact.phnumber.toString().length < 10 || initialContact.address.toString().length > 14) {
+      toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Phone Number</>);
+      setError({ name: "", address: "", phnumber: "Please Enter a Valid phone number", email: "", message: "" })
     }
-    else if(initialContact.email.toString().length<5){
-      setError({name:"",address:"",phnumber:"",email:"Please enter valid Email address",message:""})
+    else if (initialContact.email.toString().length < 5) {
+      toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Email</>);
+      setError({ name: "", address: "", phnumber: "", email: "Please Enter a Valid Email address", message: "" })
     }
-    else if(initialContact.message.toString().length<20||initialContact.message.toString().length>500){
-      setError({name:"",address:"",phnumber:"",email:"",message:"Message must be 20-500 character"})
+    else if (initialContact.message.toString().length < 20 || initialContact.message.toString().length > 500) {
+      toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Message</>);
+      setError({ name: "", address: "", phnumber: "", email: "", message: "Message must be 20-500 character" })
     }
-    else{
-      setError({name:"",address:"",phnumber:"",email:"",message:""})
+    else {
+      setError({ name: "", address: "", phnumber: "", email: "", message: "" })
+      toast.success(<><div id="SuccessforTost">Success</div>{" "}Submit Success</>);              
       console.log(initialContact);
     }
   }
@@ -91,6 +100,17 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   )
 }

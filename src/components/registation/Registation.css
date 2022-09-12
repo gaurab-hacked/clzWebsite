@@ -21,6 +21,7 @@
     width: 15%;
     margin: 0 30px;
     text-align: right;
+    cursor: pointer;
 }
 #RegCheckStream{
     display: flex;
@@ -50,7 +51,6 @@
 #regFormweb #registerInputfield input{
     font-size: 14px;
     margin: 10px auto;
-    color: rgb(0, 0, 0, 0.7);
 }
 #regFormweb #registerInputfield input:focus{
     outline: none;
@@ -83,14 +83,22 @@
 #RegSubBtn button:hover{
     background-color: #2465dc;
 }
+.ErrorMessageReg{
+    color: red!important;
+    margin-left: 25%!important;
+    font-size: 12px!important;
+}
+#registerInputfield .ErrorMessageReg{
+    margin-left: 22%!important;
+}
 
 /* for responsiveness  */
 @media screen and (max-width: 1300px) {
     #RegCheckStream .optionsStream{
         flex-flow: row wrap;
     }
-    
 }
+    
 @media screen and (max-width: 1070px) {
     #registerInputfield .inpfilds{
         display: flex;
@@ -127,10 +135,7 @@
     #regFormweb form h4 {
         font-size: 18px;
     }
-}
-
-#ErrorMessageReg{
-    color: red;
-    margin-left: 25%;
-    font-size: 14px;
+    #registerInputfield .ErrorMessageReg{
+        margin-left: 7%!important;
+    }
 }

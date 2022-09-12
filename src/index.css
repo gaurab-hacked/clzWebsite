@@ -1,3 +1,22 @@
+:root {
+  --toastify-color-success: #00e600!important;
+  --toastify-color-error: #ff0000!important;
+}
+
+.Toastify{
+  font-size: 14px;
+}
+#ErrorforTost{
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--toastify-color-error);
+}
+#SuccessforTost{
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--toastify-color-success);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

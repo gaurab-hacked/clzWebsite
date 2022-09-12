@@ -1,55 +1,61 @@
 import "./Login.css";
 import React, { useEffect, useState } from 'react'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
     // for scrolling top
     useEffect(() => {
         window.scrollTo(0, 0)
         document.title = "GNC-Login"
-      }, [])
+    }, [])
 
 
     //for imputfield message error
     const [error, setError] = useState({
-        username:"",
-        password:""
+        username: "",
+        password: ""
     });
 
-    
+
     //for user name and password
     const [initialVal, setInitialVal] = useState({
-        username:"",
-        password:""
+        username: "",
+        password: ""
     })
-    const inpvalchange = (e)=>{
-        setInitialVal({...initialVal, [e.target.name]:e.target.value})
+    const inpvalchange = (e) => {
+        setInitialVal({ ...initialVal, [e.target.name]: e.target.value })
     }
 
     //for check box
     const [checkbox, setCheckBox] = useState("");
-    const checkboxchange =(e)=>{
+    const checkboxchange = (e) => {
         if (e.target.checked) {
             setCheckBox("true");
         }
-        else{
+        else {
             setCheckBox("false");
         }
     }
-    
+
     //needs to send in backend
-    const handelSubmit = (e) =>{
+    const handelSubmit = (e) => {
         e.preventDefault();
         //include check box value
         initialVal.remember = checkbox;
         //include error logic
-        if(initialVal.username.toString().length<5||initialVal.username.toString().length>20){
-            setError({username:"Name must be 5-20 character.",password:""})
+        if (initialVal.username.toString().length < 5 || initialVal.username.toString().length > 50 || !isNaN(initialVal.username)) {
+            toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Username</>);
+            setError({ username: "Name must be 5-50 character.", password: "" })
         }
-        else if(initialVal.password.toString().length<6||initialVal.password.toString().length>16){
-            setError({username:"",password:"Password must be 6-16 character"})
+        else if (initialVal.password.toString().length < 6 || initialVal.password.toString().length > 16) {
+            toast.error(<><div id="ErrorforTost">Error</div>{" "}Please Enter a Valid Password</>);
+            setError({ username: "", password: "Password must be 6-16 character" })
         }
-        else{
-            setError({username:"",password:""});
+        else {
+            toast.success(<><div id="SuccessforTost">Success</div>{" "}Login Success</>);              
+            setError({ username: "", password: "" });
             console.log(initialVal);
         }
     }
@@ -87,6 +93,17 @@ const Login = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer
+                position="top-right"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     )
 }

@@ -58,7 +58,7 @@ const Navigation = () => {
                             <li><Link to="/contact" onClick={() => { setShowMediaIcons(false) }}>Contact</Link></li>
                             <li><Link to="/studentcenter" onClick={() => { setShowMediaIcons(false) }}>Student Center</Link></li>
                             <li><Link to="/gallery" onClick={() => { setShowMediaIcons(false) }}>Gallery</Link></li>
-                            <li><Link to="/PreRegistation" onClick={() => { setShowMediaIcons(false) }}>Register</Link></li>
+                            <li><Link to="/registration" onClick={() => { setShowMediaIcons(false) }}>Registration</Link></li>
                             <Link to="/login">
                             <button id="contactBtn" onClick={() => { setShowMediaIcons(false) }}>Login</button>
                             </Link>

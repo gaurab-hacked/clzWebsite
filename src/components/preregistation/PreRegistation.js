@@ -65,8 +65,8 @@ const PreRegistation = () => {
       setValError({ stream: "Please check only one stream", name: "", DOB: "", fName: "", mName: "", pAddress: "", lAddress: "", phNumber: "", email: "" })
       validation = false;
     }
-    else if (registerVal.name.length <= 5 || registerVal.name.length>=20) {
-      setValError({ stream: "", name: "Name must be greater than 5-20 character", DOB: "", fName: "", mName: "", pAddress: "", lAddress: "", phNumber: "", email: "" });
+    else if (registerVal.name.length <= 5 || registerVal.name.length>=30) {
+      setValError({ stream: "", name: "Name must be greater than 5-30 character", DOB: "", fName: "", mName: "", pAddress: "", lAddress: "", phNumber: "", email: "" });
       validation = false;
     }
     else if (Number(registerVal.BSdob.slice(0, 4)) < 2052 || Number(registerVal.BSdob.slice(0, 4)) > 2067) {
